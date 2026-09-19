@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "velvet",
+  "version": "${version}",
+  "name": "Velvet",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/velvet/logo.png",
+  "environment": "*",
+  "entrypoints": {
+
+    "main": [
+      "im.best0ption.velvet.VelvetHack"
+    ]
+  },
+  "mixins": [
+    "velvet.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
