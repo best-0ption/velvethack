@@ -38,9 +38,9 @@ void main() {
     );
     grad = normalize(grad + vec2(0.0001));
 
-    float edge = smoothstep(-VELVET_EDGE, 0.0, dist);
+    float edge = smoothstep(-EDGE, 0.0, dist);
     vec2 uv = vec2(gl_FragCoord.x, ScreenSize.y - gl_FragCoord.y) / ScreenSize;
-    vec2 bend = grad * edge * (VELVET_REFRACT / ScreenSize);
+    vec2 bend = grad * edge * (REFRACT / ScreenSize);
     vec3 glass = vec3(
         texture(Sampler0, uv + bend * 1.15).r,
         texture(Sampler0, uv + bend).g,
@@ -48,7 +48,7 @@ void main() {
     );
 
     float luma = dot(glass, vec3(0.299, 0.587, 0.114));
-    glass = mix(vec3(luma), glass, VELVET_SATURATION) * 1.06 + 0.02;
+    glass = mix(vec3(luma), glass, SATURATION) * 1.06 + 0.02;
 
     float spec = smoothstep(0.3, 1.0, -grad.y) * edge;
     glass += vec3(0.30) * spec;

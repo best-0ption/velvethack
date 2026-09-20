@@ -10,7 +10,6 @@
   "icon": "assets/velvet/logo.png",
   "environment": "*",
   "entrypoints": {
-
     "main": [
       "im.best0ption.velvet.VelvetHack"
     ]

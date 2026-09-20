@@ -298,7 +298,7 @@ public class RenderUtils {
         }
 
         private static void blit(CommandEncoder encoder, RenderPipeline pipeline, GpuTextureView target, GpuTextureView input) {
-            try (RenderPass pass = encoder.createRenderPass(() -> "ADOLFGITLER", target, Optional.empty())) {
+            try (RenderPass pass = encoder.createRenderPass(() -> "dssasad", target, Optional.empty())) {
                 pass.setPipeline(RenderSystem.getCompiledPipeline(pipeline));
                 pass.setVertexBuffer(0, quad.slice());
                 pass.setUniform("Sampler0", input, sampler());
