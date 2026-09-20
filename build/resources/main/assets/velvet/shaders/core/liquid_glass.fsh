@@ -38,25 +38,30 @@ void main() {
     );
     grad = normalize(grad + vec2(0.0001));
 
-    float edge = smoothstep(-EDGE, 0.0, dist);
+    float lens = 1.0 - smoothstep(0.0, EDGE, -dist);
+
     vec2 uv = vec2(gl_FragCoord.x, ScreenSize.y - gl_FragCoord.y) / ScreenSize;
-    vec2 bend = grad * edge * (REFRACT / ScreenSize);
+    vec2 bend = grad * lens * (REFRACT / ScreenSize);
     vec3 glass = vec3(
-        texture(Sampler0, uv + bend * 1.15).r,
+        texture(Sampler0, uv + bend * 1.1).r,
         texture(Sampler0, uv + bend).g,
-        texture(Sampler0, uv + bend * 0.85).b
+        texture(Sampler0, uv + bend * 0.9).b
     );
 
     float luma = dot(glass, vec3(0.299, 0.587, 0.114));
-    glass = mix(vec3(luma), glass, SATURATION) * 1.06 + 0.02;
+    glass = mix(vec3(luma), glass, SATURATION);
+    glass = glass * 1.1 + 0.045;
 
-    float spec = smoothstep(0.3, 1.0, -grad.y) * edge;
-    glass += vec3(0.30) * spec;
-    float shadow = smoothstep(0.3, 1.0, grad.y) * edge;
-    glass -= vec3(0.10) * shadow;
+    float topLight = clamp(0.55 - 0.45 * grad.y, 0.0, 1.0);
+    float rim = smoothstep(-2.5, -0.4, dist);
+    glass += vec3(RIM) * rim * topLight;
+    float glow = smoothstep(-2.5, -5.0, dist) * smoothstep(-9.0, -2.5, dist);
+    glass += vec3(RIM) * glow * 0.15 * topLight;
+    float bottomShade = smoothstep(-4.0, -0.5, dist) * clamp(0.5 + 0.5 * grad.y, 0.0, 1.0);
+    glass -= vec3(0.07) * bottomShade;
 
     float grain = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
-    glass += (grain - 0.5) * 0.015;
+    glass += (grain - 0.5) * 0.012;
 
     vec4 color = vec4(glass * vertexColor.rgb, vertexColor.a * alpha);
     if (color.a == 0.0) {

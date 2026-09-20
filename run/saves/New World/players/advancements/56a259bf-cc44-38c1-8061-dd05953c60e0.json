@@ -1,0 +1,16 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:river": "2026-09-20 00:27:06 +0000",
+      "minecraft:stony_shore": "2026-09-20 00:28:40 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-09-20 00:27:05 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 5023
+}

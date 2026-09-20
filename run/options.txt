@@ -24,7 +24,7 @@ guiScale:2
 debugGuiScale:0
 maxAnisotropyBit:1
 textureFiltering:1
-maxFps:120
+maxFps:260
 improvedTransparency:false
 inactivityFpsLimit:"afk"
 mipmapLevels:4

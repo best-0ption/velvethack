@@ -57,8 +57,8 @@ public class RenderUtils {
     public static final RenderPipeline liquid = windowPipeline(
         "pipeline/liquid_glass",
         "velvet:core/liquid_glass",
-        new String[]{"EDGE", "REFRACT", "SATURATION"},
-        new float[]{18.0F, 20.0F, 1.35F}
+        new String[]{"EDGE", "REFRACT", "SATURATION", "RIM"},
+        new float[]{10.0F, 8.0F, 1.1F, 0.55F}
     );
 
     private static final Map<Identifier, GpuTextureView> textures = new Object2ObjectOpenHashMap<>();
@@ -223,7 +223,9 @@ public class RenderUtils {
             passPipeline("pipeline/gauss_h1", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{1.0F, 0.0F, 1.0F}),
             passPipeline("pipeline/gauss_v1", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{0.0F, 1.0F, 1.0F}),
             passPipeline("pipeline/gauss_h2", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{1.0F, 0.0F, 2.0F}),
-            passPipeline("pipeline/gauss_v2", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{0.0F, 1.0F, 2.0F})
+            passPipeline("pipeline/gauss_v2", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{0.0F, 1.0F, 2.0F}),
+            passPipeline("pipeline/gauss_h3", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{1.0F, 0.0F, 3.5F}),
+            passPipeline("pipeline/gauss_v3", "velvet:core/blur_gauss", new String[]{"DIR_X", "DIR_Y", "SCALE"}, new float[]{0.0F, 1.0F, 3.5F})
         };
         private static int texW = -1;
         private static int texH = -1;

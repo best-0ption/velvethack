@@ -20,11 +20,11 @@ void main() {
     float smoothness = fontParams.y;
     float dist = median(texture(Sampler0, texCoord0).rgb) - 0.5 + thickness;
     vec2 h = vec2(dFdx(texCoord0.x), dFdy(texCoord0.y)) * vec2(textureSize(Sampler0, 0));
-    float pixels = VELVET_RANGE * inversesqrt(h.x * h.x + h.y * h.y);
+    float pixels = RANGE * inversesqrt(h.x * h.x + h.y * h.y);
     float alpha = smoothstep(-smoothness, smoothness, dist * pixels);
     vec4 color = vec4(vertexColor.rgb, vertexColor.a * alpha);
-#ifdef VELVET_OUTLINE
-    vec4 outlineColor = vec4(VELVET_OUTLINE_R, VELVET_OUTLINE_G, VELVET_OUTLINE_B, 1.0);
+#ifdef OUTLINE
+    vec4 outlineColor = vec4(OUTLINE_R, OUTLINE_G, OUTLINE_B, 1.0);
     color = mix(outlineColor, vertexColor, alpha);
     color.a *= smoothstep(-smoothness, smoothness, (dist + outlineThickness) * pixels);
 #endif

@@ -6,6 +6,7 @@ public class AnimationValue {
     private final Easing easing;
     private float time;
     private boolean running;
+    private boolean reverse;
 
     public AnimationValue(float duration, Easing easing) {
         this.duration = duration;
@@ -25,13 +26,27 @@ public class AnimationValue {
         running = false;
     }
 
+    public void setReverse(boolean reverse) {
+        this.reverse = reverse;
+    }
+
+    public boolean isReverse() {
+        return reverse;
+    }
+
     public void update(float delta) {
-        if (running && time < duration) {
+        if (!running) return;
+        if (reverse) {
+            time = Math.max(time - delta, 0.0F);
+            if (time <= 0.0F) {
+                running = false;
+            }
+        } else if (time < duration) {
             time = Math.min(time + delta, duration);
         }
     }
 
     public float get() {
-        return easing.ease(Math.min(time / duration, 1.0F));
+        return easing.ease(Math.min(Math.max(time / duration, 0.0F), 1.0F));
     }
 }
