@@ -20,10 +20,18 @@ layout(location = 0) out vec4 vertexColor;
 layout(location = 1) out vec2 localPos;
 layout(location = 2) out vec2 rectSize;
 layout(location = 3) out float cornerRadius;
+layout(location = 4) out vec3 gradTo;
+layout(location = 5) out vec2 gradFlow;
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
     localPos = Position.xy - UV0;
     rectSize = UV3;
     cornerRadius = LineWidth;
     vertexColor = Color;
+    gradTo = vec3(
+        float(UV1.x >> 7),
+        float(((UV1.x & 127) << 1) | ((UV1.y >> 14) & 1)),
+        float((UV1.y >> 6) & 255)
+    ) / 255.0;
+    gradFlow = vec2(float(UV2.y & 3), float(((UV1.y & 63) << 4) | ((UV2.y >> 2) & 15)) * 0.0009765625);
 }

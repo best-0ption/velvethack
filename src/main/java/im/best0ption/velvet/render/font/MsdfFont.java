@@ -36,6 +36,7 @@ public class MsdfFont {
     private final Map<Character, Glyph> glyphs = new HashMap<>();
     private final float distanceRange;
     private final float ascender;
+    private final float descender;
     private final float atlasWidth;
     private final float atlasHeight;
     private final GpuTextureView atlas;
@@ -54,6 +55,7 @@ public class MsdfFont {
 
         this.distanceRange = data.atlas.distanceRange;
         this.ascender = data.metrics.ascender;
+        this.descender = data.metrics.descender;
         this.atlasWidth = data.atlas.width;
         this.atlasHeight = data.atlas.height;
         for (GlyphData glyphData : data.glyphs) {
@@ -122,6 +124,10 @@ public class MsdfFont {
             }
         }
         return width;
+    }
+
+    public float getHeight(float size) {
+        return (ascender - descender) * size;
     }
 
     private void drawString(GuiGraphicsExtractor graphics, String text, float x, float y, float thickness, float size, int color, boolean outline) {

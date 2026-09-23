@@ -13,6 +13,7 @@
     "main": [
       "im.best0ption.velvet.VelvetHack"
     ]
+
   },
   "mixins": [
     "velvet.mixins.json"

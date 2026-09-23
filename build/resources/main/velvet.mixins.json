@@ -8,6 +8,9 @@
   "client": [
     "EventTickHook",
     "GameRendererMixin",
+    "KeyboardHandlerMixin",
+    "MinecraftKeybindBlockerMixin",
+    "MouseHandlerMixin",
     "PauseScreenBlockerMixin",
 
     "ScreenTickStopperDisabler"

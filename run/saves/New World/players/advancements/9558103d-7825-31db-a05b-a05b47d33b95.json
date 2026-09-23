@@ -1,0 +1,48 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:ocean": "2026-09-21 16:54:30 +0000",
+      "minecraft:river": "2026-09-21 16:56:28 +0000",
+      "minecraft:stony_shore": "2026-09-21 16:56:20 +0000",
+      "minecraft:plains": "2026-09-21 16:56:23 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/jack_o_lantern": {
+    "criteria": {
+      "has_carved_pumpkin": "2026-09-21 16:56:36 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-09-21 16:54:29 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/straw_bed": {
+    "criteria": {
+      "has_hay_block": "2026-09-21 16:56:35 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/pumpkin_pie": {
+    "criteria": {
+      "has_carved_pumpkin": "2026-09-21 16:56:36 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/wheat": {
+    "criteria": {
+      "has_hay_block": "2026-09-21 16:56:35 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_hay_block": "2026-09-21 16:56:35 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 5023
+}

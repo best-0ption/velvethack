@@ -30,6 +30,12 @@ public class AnimationValue {
         this.reverse = reverse;
     }
 
+    /** continue the animation in the given direction from wherever it is now */
+    public void run(boolean forward) {
+        this.reverse = !forward;
+        this.running = true;
+    }
+
     public boolean isReverse() {
         return reverse;
     }

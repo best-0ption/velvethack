@@ -30,7 +30,6 @@ import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.client.gui.render.TextureSetup;
 import net.minecraft.client.renderer.BindGroupLayouts;
-import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.state.gui.GuiElementRenderState;
 import net.minecraft.resources.Identifier;
 import org.joml.Matrix3x2f;
@@ -62,6 +61,7 @@ public class RenderUtils {
     );
 
     private static final Map<Identifier, GpuTextureView> textures = new Object2ObjectOpenHashMap<>();
+    private static final Map<Identifier, GifTexture> gifs = new Object2ObjectOpenHashMap<>();
 
     public enum BlurType {
         KAWASE,
@@ -95,7 +95,10 @@ public class RenderUtils {
 
     private static void markBlur(GuiGraphicsExtractor graphics) {
         if (!blurMarked) {
-            graphics.blurBeforeThisStratum();
+            try {
+                graphics.blurBeforeThisStratum();
+            } catch (IllegalStateException e) {
+            }
             blurMarked = true;
         }
         if (blurType == BlurType.KAWASE) {
@@ -180,12 +183,75 @@ public class RenderUtils {
         ));
     }
 
+    public static void drawGradientRectangle(GuiGraphicsExtractor graphics, float x, float y, float width, float radius, float height, int from, int to) {
+        graphics.guiRenderState.addGuiElement(new RectRenderState(
+            rect, TextureSetup.noTexture(), new Matrix3x2f(graphics.pose()),
+            x, y, x + width, y + height, radius, 0.0F, from, to, false, graphics.scissorStack.peek()
+        ));
+    }
+
+    public static void drawGradientRectangleV(GuiGraphicsExtractor graphics, float x, float y, float width, float radius, float height, int from, int to) {
+        graphics.guiRenderState.addGuiElement(new RectRenderState(
+            rect, TextureSetup.noTexture(), new Matrix3x2f(graphics.pose()),
+            x, y, x + width, y + height, radius, 0.0F, from, to, true, graphics.scissorStack.peek()
+        ));
+    }
+
+    public static void drawGradientBorder(GuiGraphicsExtractor graphics, float x, float y, float width, float height, float radius, float thickness, int from, int to) {
+        graphics.guiRenderState.addGuiElement(new RectRenderState(
+            border, TextureSetup.noTexture(), new Matrix3x2f(graphics.pose()),
+            x, y, x + width, y + height, radius, thickness, from, to, false, graphics.scissorStack.peek()
+        ));
+    }
+
+    public static void drawFlowRectangle(GuiGraphicsExtractor graphics, float x, float y, float width, float radius, float height, int from, int to) {
+        graphics.guiRenderState.addGuiElement(flowState(rect, graphics, x, y, width, height, radius, 0.0F, from, to, 1));
+    }
+
+    public static void drawFlowRectangleV(GuiGraphicsExtractor graphics, float x, float y, float width, float radius, float height, int from, int to) {
+        graphics.guiRenderState.addGuiElement(flowState(rect, graphics, x, y, width, height, radius, 0.0F, from, to, 2));
+    }
+
+    public static void drawFlowBorder(GuiGraphicsExtractor graphics, float x, float y, float width, float height, float radius, float thickness, int from, int to) {
+        graphics.guiRenderState.addGuiElement(flowState(border, graphics, x, y, width, height, radius, thickness, from, to, 1));
+    }
+
+    private static FlowRectRenderState flowState(RenderPipeline pipeline, GuiGraphicsExtractor graphics, float x, float y, float width, float height, float radius, float thickness, int from, int to, int mode) {
+        return new FlowRectRenderState(
+            pipeline, TextureSetup.noTexture(), new Matrix3x2f(graphics.pose()),
+            x, y, x + width, y + height, radius, thickness, from, to, mode, graphics.scissorStack.peek()
+        );
+    }
+
     public static void drawTexture(GuiGraphicsExtractor graphics, Identifier id, float x, float y, float width, float height, float radius, int color) {
         graphics.guiRenderState.addGuiElement(new TextureRectRenderState(
-            texture, TextureSetup.singleTexture(getTexture(id), RenderSystem.getSamplerCache().getClampToEdge(FilterMode.LINEAR)),
+            texture, TextureSetup.singleTexture(getTexture(id), RenderSystem.getSamplerCache().getClampToEdge(FilterMode.LINEAR, true)),
             new Matrix3x2f(graphics.pose()),
             x, y, x + width, y + height, 0.0F, 0.0F, 1.0F, 1.0F, width, height, radius, color, graphics.scissorStack.peek()
         ));
+    }
+
+    public static void drawGif(GuiGraphicsExtractor graphics, Identifier id, float x, float y, float width, float height, float radius, int color) {
+        graphics.guiRenderState.addGuiElement(new TextureRectRenderState(
+            texture, TextureSetup.singleTexture(getGif(id).currentFrame(), RenderSystem.getSamplerCache().getClampToEdge(FilterMode.LINEAR, true)),
+            new Matrix3x2f(graphics.pose()),
+            x, y, x + width, y + height, 0.0F, 0.0F, 1.0F, 1.0F, width, height, radius, color, graphics.scissorStack.peek()
+        ));
+    }
+
+    public static GifTexture getGif(Identifier id) {
+        GifTexture gif = gifs.get(id);
+        if (gif == null) {
+            String path = id.getPath();
+            Identifier resource = path.endsWith(".gif") ? id : Identifier.fromNamespaceAndPath(id.getNamespace(), path + ".gif");
+            try (InputStream stream = Minecraft.getInstance().getResourceManager().open(resource)) {
+                gif = GifTexture.load(resource, stream);
+            } catch (IOException e) {
+                throw new RuntimeException("cannot load " + resource, e);
+            }
+            gifs.put(id, gif);
+        }
+        return gif;
     }
 
     public static GpuTextureView getTexture(Identifier id) {
@@ -198,12 +264,106 @@ public class RenderUtils {
             } catch (IOException e) {
                 throw new RuntimeException("cannot load " + resource, e);
             }
-            DynamicTexture texture = new DynamicTexture(() -> "" + id, image);
-            Minecraft.getInstance().getTextureManager().register(id, texture);
-            view = texture.getTextureView();
+            image = downscale(image, 512);
+            view = uploadTextureWithMipmaps(id, image);
             textures.put(id, view);
         }
         return view;
+    }
+
+    static GpuTextureView uploadTextureWithMipmaps(Identifier id, NativeImage level0) {
+        int width = level0.getWidth();
+        int height = level0.getHeight();
+        int levels = 32 - Integer.numberOfLeadingZeros(Math.min(width, height));
+        GpuDevice device = RenderSystem.getDevice();
+        GpuTexture texture = device.createTexture(
+            () -> "velvet " + id,
+            GpuTexture.USAGE_TEXTURE_BINDING | GpuTexture.USAGE_COPY_DST,
+            GpuFormat.RGBA8_UNORM,
+            width, height, 1, levels
+        );
+        CommandEncoder encoder = device.createCommandEncoder();
+        encoder.writeToTexture(texture, level0);
+        NativeImage previous = level0;
+        for (int level = 1; level < levels; level++) {
+            NativeImage mip = halveImage(previous);
+            encoder.writeToTexture(texture, mip, level, 0, 0, 0);
+            if (previous != level0) {
+                previous.close();
+            }
+            previous = mip;
+        }
+        if (previous != level0) {
+            previous.close();
+        }
+        level0.close();
+        return device.createTextureView(texture);
+    }
+
+    private static NativeImage halveImage(NativeImage source) {
+        int width = Math.max(1, source.getWidth() / 2);
+        int height = Math.max(1, source.getHeight() / 2);
+        int sourceWidth = source.getWidth();
+        int sourceHeight = source.getHeight();
+        NativeImage result = new NativeImage(width, height, true);
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                int sx0 = x * 2;
+                int sy0 = y * 2;
+                int sx1 = Math.min(sourceWidth, sx0 + 2);
+                int sy1 = Math.min(sourceHeight, sy0 + 2);
+                long a = 0, r = 0, g = 0, b = 0;
+                int count = 0;
+                for (int sy = sy0; sy < sy1; sy++) {
+                    for (int sx = sx0; sx < sx1; sx++) {
+                        int pixel = source.getPixel(sx, sy);
+                        a += (pixel >> 24) & 0xFF;
+                        r += (pixel >> 16) & 0xFF;
+                        g += (pixel >> 8) & 0xFF;
+                        b += pixel & 0xFF;
+                        count++;
+                    }
+                }
+                result.setPixel(x, y, (int) ((a / count) << 24 | (r / count) << 16 | (g / count) << 8 | b / count));
+            }
+        }
+        return result;
+    }
+
+    static NativeImage downscale(NativeImage image, int maxSide) {
+        int width = image.getWidth();
+        int height = image.getHeight();
+        if (Math.max(width, height) <= maxSide) {
+            return image;
+        }
+        float scale = (float) maxSide / Math.max(width, height);
+        int newWidth = Math.max(1, Math.round(width * scale));
+        int newHeight = Math.max(1, Math.round(height * scale));
+        NativeImage result = new NativeImage(newWidth, newHeight, true);
+        for (int y = 0; y < newHeight; y++) {
+            for (int x = 0; x < newWidth; x++) {
+                int x0 = (int) ((float) x / scale);
+                int x1 = Math.min(width, Math.max(x0 + 1, (int) ((float) (x + 1) / scale)));
+                int y0 = (int) ((float) y / scale);
+                int y1 = Math.min(height, Math.max(y0 + 1, (int) ((float) (y + 1) / scale)));
+                long a = 0, b = 0, c = 0, d = 0;
+                int count = 0;
+                for (int sy = y0; sy < y1; sy++) {
+                    for (int sx = x0; sx < x1; sx++) {
+                        int pixel = image.getPixel(sx, sy);
+                        a += (pixel >> 24) & 0xFF;
+                        b += (pixel >> 16) & 0xFF;
+                        c += (pixel >> 8) & 0xFF;
+                        d += pixel & 0xFF;
+                        count++;
+                    }
+                }
+                int avg = (int) (a / count) << 24 | (int) (b / count) << 16 | (int) (c / count) << 8 | (int) (d / count);
+                result.setPixel(x, y, avg);
+            }
+        }
+        image.close();
+        return result;
     }
 
     public static void blurBeforeThis(GuiGraphicsExtractor graphics) {
@@ -366,6 +526,8 @@ public class RenderUtils {
         float radius,
         float thickness,
         int color,
+        int color2,
+        boolean vertical,
         @Nullable ScreenRectangle scissorArea,
         @Nullable ScreenRectangle bounds
     ) implements GuiElementRenderState {
@@ -383,7 +545,25 @@ public class RenderUtils {
             final int color,
             @Nullable final ScreenRectangle scissorArea
         ) {
-            this(pipeline, textureSetup, pose, x0, y0, x1, y1, radius, thickness, color, scissorArea, null);
+            this(pipeline, textureSetup, pose, x0, y0, x1, y1, radius, thickness, color, color, false, scissorArea, null);
+        }
+
+        public RectRenderState(
+            final RenderPipeline pipeline,
+            final TextureSetup textureSetup,
+            final Matrix3x2fc pose,
+            final float x0,
+            final float y0,
+            final float x1,
+            final float y1,
+            final float radius,
+            final float thickness,
+            final int color,
+            final int color2,
+            final boolean vertical,
+            @Nullable final ScreenRectangle scissorArea
+        ) {
+            this(pipeline, textureSetup, pose, x0, y0, x1, y1, radius, thickness, color, color2, vertical, scissorArea, null);
         }
 
         public RectRenderState {
@@ -398,11 +578,79 @@ public class RenderUtils {
             float width = x1 - x0;
             float height = y1 - y0;
             int packedThickness = Math.max(0, Math.min(32000, (int) (thickness * 16.0F)));
+            int topLeft = color;
+            int bottomLeft = vertical ? color2 : color;
+            int bottomRight = color2;
+            int topRight = vertical ? color : color2;
 
-            vertexConsumer.addVertexWith2DPose(pose, x0, y0).setColor(color).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
-            vertexConsumer.addVertexWith2DPose(pose, x0, y1).setColor(color).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
-            vertexConsumer.addVertexWith2DPose(pose, x1, y1).setColor(color).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
-            vertexConsumer.addVertexWith2DPose(pose, x1, y0).setColor(color).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x0, y0).setColor(topLeft).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x0, y1).setColor(bottomLeft).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x1, y1).setColor(bottomRight).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x1, y0).setColor(topRight).setUv(x0, y0).setUv1(0, 0).setUv2(packedThickness, 0).setUv3(width, height).setLineWidth(radius);
+        }
+    }
+
+    public static final int FLOW_MS = 3000;
+
+    public static record FlowRectRenderState(
+        RenderPipeline pipeline,
+        TextureSetup textureSetup,
+        Matrix3x2fc pose,
+        float x0,
+        float y0,
+        float x1,
+        float y1,
+        float radius,
+        float thickness,
+        int color,
+        int color2,
+        int mode,
+        @Nullable ScreenRectangle scissorArea,
+        @Nullable ScreenRectangle bounds
+    ) implements GuiElementRenderState {
+
+        public FlowRectRenderState(
+            final RenderPipeline pipeline,
+            final TextureSetup textureSetup,
+            final Matrix3x2fc pose,
+            final float x0,
+            final float y0,
+            final float x1,
+            final float y1,
+            final float radius,
+            final float thickness,
+            final int color,
+            final int color2,
+            final int mode,
+            @Nullable final ScreenRectangle scissorArea
+        ) {
+            this(pipeline, textureSetup, pose, x0, y0, x1, y1, radius, thickness, color, color2, mode, scissorArea, null);
+        }
+
+        public FlowRectRenderState {
+            ScreenRectangle rect = new ScreenRectangle(
+                Math.round(x0), Math.round(y0), Math.round(x1 - x0), Math.round(y1 - y0)
+            ).transformMaxBounds(pose);
+            bounds = scissorArea != null ? scissorArea.intersection(rect) : rect;
+        }
+
+        @Override
+        public void buildVertices(VertexConsumer vertexConsumer) {
+            float width = x1 - x0;
+            float height = y1 - y0;
+            int packedThickness = Math.max(0, Math.min(32000, (int) (thickness * 16.0F)));
+            int phase = (int) ((System.currentTimeMillis() % FLOW_MS) / (double) FLOW_MS * 1024.0);
+            int r = (color2 >> 16) & 255;
+            int g = (color2 >> 8) & 255;
+            int b = color2 & 255;
+            int uv1x = (r << 7) | (g >> 1);
+            int uv1y = ((g & 1) << 14) | (b << 6) | (phase >> 4);
+            int uv2y = ((phase & 15) << 2) | mode;
+
+            vertexConsumer.addVertexWith2DPose(pose, x0, y0).setColor(color).setUv(x0, y0).setUv1(uv1x, uv1y).setUv2(packedThickness, uv2y).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x0, y1).setColor(color).setUv(x0, y0).setUv1(uv1x, uv1y).setUv2(packedThickness, uv2y).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x1, y1).setColor(color).setUv(x0, y0).setUv1(uv1x, uv1y).setUv2(packedThickness, uv2y).setUv3(width, height).setLineWidth(radius);
+            vertexConsumer.addVertexWith2DPose(pose, x1, y0).setColor(color).setUv(x0, y0).setUv1(uv1x, uv1y).setUv2(packedThickness, uv2y).setUv3(width, height).setLineWidth(radius);
         }
     }
 

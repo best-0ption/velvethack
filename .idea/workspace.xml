@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6263ff70-160c-4a35-bf63-d140bcfc8f6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/9.6.0/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/9.6.0/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/9.6.0/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/9.6.0/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/9.6.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Velvet.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Velvet.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/modules/Module.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/modules/ModuleInitializator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/modules/ModuleRegister.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/modules/Type.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/modules/impl/player/AutoSprint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/Montserrat-Regular.ttf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/Montserrat-Regular.ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/consolas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/consolas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/damage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/damage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/open.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfbold.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfbold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfmedium.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfmedium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfsemibold.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/fonts/sfsemibold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/textures/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/check_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2026-09-21_05.51.10-client.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2026-09-21_05.51.47-client.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2026-09-21_05.52.28-client.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2026-09-21-1.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2026-09-21-2.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2026-09-21-3.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2026-09-21-4.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-1.1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-2.1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-2.1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-3.-1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-3.0.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-3.1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/0f12271c-8f6c-3b4a-9805-4e9544c8a791.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/24c19b83-c868-336d-a5c8-61e6dc8d3cd5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/2b83ebdc-0604-37b1-94a0-4298b1021b84.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/2ecec10b-3fca-3e44-9b51-4cca88e1c207.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/3dc994a6-e4ba-3e8a-9bf9-4271ccca9810.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/408d12c9-559c-3212-bca5-d1a3fc38a0f7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/90ee7131-905c-3e5a-b4c0-60424db8bd36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/ae6cd2eb-90e0-375b-babc-c41851a58e79.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/aed5efd4-551b-3965-bc28-ae21aa072a66.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/b6f7a483-95d4-3c1c-a80d-d6147f86003c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/c72e77a5-a3ff-38a0-b468-253b21a4bd27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/eac293da-7d7d-3c6a-94e5-fba80de0212f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/0f12271c-8f6c-3b4a-9805-4e9544c8a791.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/0f12271c-8f6c-3b4a-9805-4e9544c8a791.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/24c19b83-c868-336d-a5c8-61e6dc8d3cd5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/24c19b83-c868-336d-a5c8-61e6dc8d3cd5.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/2b83ebdc-0604-37b1-94a0-4298b1021b84.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/2ecec10b-3fca-3e44-9b51-4cca88e1c207.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/2ecec10b-3fca-3e44-9b51-4cca88e1c207.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/3dc994a6-e4ba-3e8a-9bf9-4271ccca9810.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/3dc994a6-e4ba-3e8a-9bf9-4271ccca9810.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/408d12c9-559c-3212-bca5-d1a3fc38a0f7.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/90ee7131-905c-3e5a-b4c0-60424db8bd36.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/ae6cd2eb-90e0-375b-babc-c41851a58e79.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/aed5efd4-551b-3965-bc28-ae21aa072a66.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/b6f7a483-95d4-3c1c-a80d-d6147f86003c.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/b6f7a483-95d4-3c1c-a80d-d6147f86003c.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/c72e77a5-a3ff-38a0-b468-253b21a4bd27.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/c72e77a5-a3ff-38a0-b468-253b21a4bd27.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/eac293da-7d7d-3c6a-94e5-fba80de0212f.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/data/eac293da-7d7d-3c6a-94e5-fba80de0212f.dat_old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/0f12271c-8f6c-3b4a-9805-4e9544c8a791.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/24c19b83-c868-336d-a5c8-61e6dc8d3cd5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/2b83ebdc-0604-37b1-94a0-4298b1021b84.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/2ecec10b-3fca-3e44-9b51-4cca88e1c207.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/3dc994a6-e4ba-3e8a-9bf9-4271ccca9810.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/408d12c9-559c-3212-bca5-d1a3fc38a0f7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/90ee7131-905c-3e5a-b4c0-60424db8bd36.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/ae6cd2eb-90e0-375b-babc-c41851a58e79.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/aed5efd4-551b-3965-bc28-ae21aa072a66.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/b6f7a483-95d4-3c1c-a80d-d6147f86003c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/c72e77a5-a3ff-38a0-b468-253b21a4bd27.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/eac293da-7d7d-3c6a-94e5-fba80de0212f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/mixin/MinecraftKeybindBlockerMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/mixin/MouseHandlerMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/modules/Module.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/modules/ModuleInitializator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/modules/ModuleRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/modules/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/modules/impl/player/AutoSprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/Montserrat-Regular.ttf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/Montserrat-Regular.ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/consolas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/consolas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/damage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/damage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/open.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfbold.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfbold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfmedium.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfmedium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfsemibold.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/fonts/sfsemibold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/textures/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.6.0/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.6.0/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/fileChanges/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.6.0/fileChanges/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-1.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.6.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.6.1/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.6.0/gc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-7e9a32a5b8/26.3/minecraft-merged-7e9a32a5b8-26.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-7e9a32a5b8/26.3/minecraft-merged-7e9a32a5b8-26.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-7e9a32a5b8/26.3/minecraft-merged-7e9a32a5b8-26.3.jar.backup" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-7e9a32a5b8/26.3/minecraft-merged-7e9a32a5b8-26.3.jar.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/VelvetHack.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/VelvetHack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/event/EventRender2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/gui/ClickGUIScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/gui/ClickGUIScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/mixin/EventTickHook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/mixin/GameRendererMixin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/mixin/PauseScreenBlockerMixin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/mixin/ScreenTickStopperDisabler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/RenderUtils$BlurEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/RenderUtils$BlurType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/RenderUtils$RectRenderState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/RenderUtils$TextureRectRenderState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/RenderUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/FontManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$Atlas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$AtlasBounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$AtlasData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$Glyph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$GlyphData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$Metrics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont$PlaneBounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/render/font/MsdfFont.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/AnimationValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/AnimationValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/CalculateUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/CalculateUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/Easing$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/Easing$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/Easing$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/Easing$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/Easing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/MouseUtility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/im/best0ption/velvet/util/TimerUtility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/velvet-0.1-ALPHA-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/velvet-0.1-ALPHA-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/velvet-0.1-ALPHA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/velvet-0.1-ALPHA.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/border.fsh" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/border.fsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/border.vsh" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/border.vsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/rectangle.fsh" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/rectangle.fsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/rectangle.vsh" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/velvet/shaders/core/rectangle.vsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/velvet.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/velvet.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2026-09-20-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2026-09-20-7.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/minecraft/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/minecraft/random_sequences.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/minecraft/wandering_trader.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/minecraft/wandering_trader.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/minecraft/weather.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/minecraft/weather.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/minecraft/world_clocks.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/minecraft/world_clocks.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/data/minecraft/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/data/minecraft/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.-2.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/entities/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/poi/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-1.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.-2.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/overworld/region/r.0.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/the_end/data/minecraft/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/the_end/data/minecraft/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/the_nether/data/minecraft/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/dimensions/minecraft/the_nether/data/minecraft/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/players/advancements/355b2127-0f2e-3f20-b6c2-8997b4abcafb.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/players/advancements/355b2127-0f2e-3f20-b6c2-8997b4abcafb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/players/data/355b2127-0f2e-3f20-b6c2-8997b4abcafb.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/players/data/355b2127-0f2e-3f20-b6c2-8997b4abcafb.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/players/stats/355b2127-0f2e-3f20-b6c2-8997b4abcafb.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/players/stats/355b2127-0f2e-3f20-b6c2-8997b4abcafb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/VelvetHack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/VelvetHack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/gui/ClickGUIScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/gui/ClickGUIScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/RenderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/RenderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/font/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/font/FontManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/font/MsdfFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/render/font/MsdfFont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/util/AnimationValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/util/AnimationValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/util/CalculateUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/im/best0ption/velvet/util/CalculateUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/border.fsh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/border.fsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/border.vsh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/border.vsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/rectangle.fsh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/rectangle.fsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/rectangle.vsh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/velvet/shaders/core/rectangle.vsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/velvet.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/velvet.mixins.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Velvet" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Velvet" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Velvet" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="fabric" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-7e9a32a5b8/26.3/minecraft-merged-7e9a32a5b8-26.3.jar!/net/minecraft/resources/Identifier.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3JbFvEX5myUi2pqgmdwqz6RrqPI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Velvet.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Velvet [runClient].executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/best0ption/Downloads/comment-remover-0.3.1-signed.zip&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Gradle.Velvet [runClient]">
+    <configuration name="Velvet [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runClient" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Velvet [runClient]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6263ff70-160c-4a35-bf63-d140bcfc8f6a" name="Changes" comment="" />
+      <created>1789922090046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789922090046</updated>
+    </task>
+    <servers />
+  </component>
+</project>
