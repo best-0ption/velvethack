@@ -1,3 +1,0 @@
-/time set 1000
-/time set 1000w
-/time set 1000
